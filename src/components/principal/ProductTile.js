@@ -3,27 +3,48 @@ import "../style.css"
 import "bulma/css/bulma.css";
 
 export default class ProductTile extends React.Component {
+    fullBackdropPath(imgName) {
+        if (imgName != null) {
+          return `https://image.tmdb.org/t/p/w500${imgName}`;
+        }
+        return 'https://i.stack.imgur.com/GNhx0.png';
+    }
+    textooFormato(describe,tam){
+        let myString = ''
+        if(describe.trim() == ''){
+            myString = "No disponible"
+        } else {
+            if(describe.length < tam){
+                myString = describe
+            } else {
+                myString = describe.substring(0,tam-3) + '...'
+            }
+        }
+        return myString
+    }
     render() {
         return (
-            <div class="card">
-                <div class="card-image">
-                    <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image"/>
+            <div className="card">
+                <div className="card-image">
+                    <figure className="image is-4by3">
+                    <img src={this.fullBackdropPath(this.props.imagen)} alt="Placeholder image"/>
                     </figure>
                 </div>
-                <div class="card-content">
-                    <div class="media">
-                        <div class="media-content">
-                            <p class="title is-4">Nombre</p>
-                            <p class="subtitle is-6">Precio $</p>
+                <div className="card-content">
+                    <div className="media">
+                        <div className="media-content">
+                            <p className="title is-4 titleHeight">
+                            {this.textooFormato(this.props.nombre,25)}</p>
+                            <p className="subtitle is-6">Popularidad: {this.props.precio}</p>
                         </div>
                     </div>
 
-                    <div class="content">
-                        Descripción: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-                    <br/><br/>
-                    <button class="button is-success">Ver Detalles</button>
+                    <div className="content">
+                    <p className="parrafoDescr">
+                        {this.textooFormato(this.props.descr,103)}
+                    </p>
+                    
+                    <button className="button is-success">Ver Detalles</button>
                     </div>
                 </div>
             </div>

@@ -48,3 +48,13 @@
   .product-title {
     font-size: 2em;
   }
+
+  .titleHeight{
+    min-height: 54px;
+  }
+
+  .parrafoDescr{
+    min-height: 130px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
