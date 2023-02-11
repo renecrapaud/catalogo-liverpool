@@ -2,10 +2,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import { UserAuthContextProvider } from "./context/userAuthContext";
 import "./App.css";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import Signup from "./components/Signup";
- {/* Container style={{ width: "400px" }} */}
+import Home from "./components/principal/Home";
+import Login from "./components/sesion/Login";
+import Signup from "./components/sesion/Signup";
 
 function App() {
   return (

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import { useUserAuth } from "../context/userAuthContext";
-import Hero from "./HeroTitle"
+import { useUserAuth } from "../../context/userAuthContext";
+import Hero from "../principal/HeroTitle"
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -25,7 +25,7 @@ const Signup = () => {
 
   return (
     <>
-      <Hero value={"Registro con dirección de correo"}></Hero>
+      <Hero seccion={'Catálogo'} SubTitulo={'Registro con dirección de correo'}></Hero>
       <Col md={{ span: 6, offset: 3 }}>
         <div className="p-4 box mt-5">
           <h2 className="mb-3">nuevo usuario</h2>

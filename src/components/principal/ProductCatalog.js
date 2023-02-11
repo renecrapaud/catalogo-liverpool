@@ -4,7 +4,7 @@ import { Col } from "react-bootstrap";
 
 export default class ProductCatalog extends React.Component {
     renderTile = () => {
-        return <Col md={4} className="mb-5">
+        return <Col md={3} className="mb-2">
             <ProductTile></ProductTile>
             </Col>
     }
@@ -13,7 +13,7 @@ export default class ProductCatalog extends React.Component {
     }
     render() {
         let tiles = [];
-        for (let i = 0; i < 9; i++) {
+        for (let i = 0; i < 8; i++) {
             tiles.push(this.renderTile());
         }
         return tiles;

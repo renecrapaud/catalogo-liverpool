@@ -5,7 +5,10 @@ Para el desarrollo utilicé la versión v12.22.9
 Versión de react utilizada: 18.0.0
 Versión de Firebase: 9.6.11
 
-Una vez que se descarga el código del repositorio hay que entrar en la carpeta del código catalogo-liverpool y ejecutar los sigueintes comandos:
+Una vez que se descarga el código del repositorio hay que entrar en la carpeta del código catalogo-liverpool
+Agregar un archivo .env con las variables que contienen la información para acceder a firebase.
+
+Después ejecutar los sigueintes comandos:
 npm install
 npm start
 

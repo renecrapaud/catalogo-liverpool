@@ -8,8 +8,8 @@ const Home = () => {
     <>
       <NavScroll></NavScroll>
       <div className="p-4 box mt-3 text-center mb-5">
-        <Row className="mb-5">
-          <Hero value={''}></Hero>
+        <Row className="mb-3 mt-5">
+          <Hero seccion={'Categoría'} SubTitulo={''}></Hero>
         </Row>
         <Row>
           <ProductCatalog></ProductCatalog>

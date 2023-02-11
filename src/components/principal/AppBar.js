@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useNavigate } from "react-router";
-import { useUserAuth } from "../context/userAuthContext";
+import { useUserAuth } from "../../context/userAuthContext";
 
 function NavScroll() {
 
@@ -22,7 +22,7 @@ function NavScroll() {
   return (
     <Navbar bg="light" expand="lg" fixed="top" style={{border: 'solid 1px rgb(230, 230, 230)'}}>
       <Container fluid>
-        <Navbar.Brand href="#">Catalogo</Navbar.Brand>
+        <Navbar.Brand href="#">Catálogo</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

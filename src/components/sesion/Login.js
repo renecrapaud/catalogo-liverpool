@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Alert, Col, Button } from "react-bootstrap";
 import GoogleButton from "react-google-button";
-import { useUserAuth } from "../context/userAuthContext";
-import Hero from "./HeroTitle"
+import { useUserAuth } from "../../context/userAuthContext";
+import Hero from "../principal/HeroTitle"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <>
-      <Hero value={"Inicio de sesión"}></Hero>
+      <Hero seccion={'Catálogo'} SubTitulo={'Inicio de sesión'}></Hero>
       <Col md={{ span: 6, offset: 3 }}>
         <div className="p-4 box login mt-5">
           {error && <Alert variant="danger">{error}</Alert>}

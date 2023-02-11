@@ -9,10 +9,10 @@ render () {
         <section className="hero is-primary">
             <div className="hero-body">
                 <p className="title">
-                Catálogo
+                  {this.props.seccion}
                 </p>
                 <p className="subtitle">
-                    {this.props.value}
+                  {this.props.SubTitulo}
                 </p>
             </div>
         </section>
