@@ -5,10 +5,12 @@ import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+ {/* Container style={{ width: "400px" }} */}
 
 function App() {
   return (
-    <Container style={{ width: "400px" }}>
+  
+    <Container>
       <Row>
         <Col>
           <UserAuthContextProvider>
@@ -19,8 +21,8 @@ function App() {
             </Routes>
           </UserAuthContextProvider>
         </Col>
-      </Row >
-    </Container >
+      </Row>
+    </Container>
   );
 }
 

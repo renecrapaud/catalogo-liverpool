@@ -1,6 +1,8 @@
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/userAuthContext";
+import ProductCatalog from "./ProductCatalog.js"
+import { Row } from "react-bootstrap";
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
@@ -17,7 +19,9 @@ const Home = () => {
   return (
     <>
       <div className="p-4 box mt-3 text-center">
-        Página inicial <br />
+        <Row>
+          <ProductCatalog></ProductCatalog>
+        </Row>
       </div>
       <div className="d-grid gap-2">
         <Button variant="primary" onClick={handleLogout}>

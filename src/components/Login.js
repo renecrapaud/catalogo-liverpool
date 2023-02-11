@@ -34,7 +34,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="p-4 box">
+      <div className="p-4 box login">
         <h2 className="mb-3">Inicio de sesión</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>

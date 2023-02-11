@@ -1,11 +1,11 @@
-body {
+.login {
   background-color: #fafafa;
   display: flex;
   justify-content: center;
   align-content: center;
   width: 100%;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 .box {
