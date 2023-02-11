@@ -1,3 +1,16 @@
+Prueba de applicación con react. Catálogo de productos
+
+Para la ejecución en ambiente local es necesario tener una versión reciente de node.js
+Para el desarrollo utilicé la versión v12.22.9
+Versión de react utilizada: 18.0.0
+Versión de Firebase: 9.6.11
+
+Una vez que se descarga el código del repositorio hay que entrar en la carpeta del código catalogo-liverpool y ejecutar los sigueintes comandos:
+npm install
+npm start
+
+Con esto se inicia la aplicación en modo de desarrollo.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
