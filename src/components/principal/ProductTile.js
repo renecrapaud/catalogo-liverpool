@@ -45,12 +45,9 @@ export default class ProductTile extends React.Component {
                     <p className="parrafoDescr">
                         {this.textooFormato(this.props.descr,103)}
                     </p>
-                    
-                    <button className="button is-success">
                         <Link to="/detalle" state={{ id: this.props.id }}>
-                            Ver detalle
+                        <button className="button is-success">Ver detalle</button>
                         </Link>
-                    </button>
                     </div>
                 </div>
             </div>
