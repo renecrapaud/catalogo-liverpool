@@ -26,7 +26,7 @@ const Signup = () => {
   return (
     <>
       <Hero seccion={'Catálogo'} SubTitulo={'Registro con dirección de correo'}></Hero>
-      <Col md={{ span: 6, offset: 3 }}>
+      <Col xs={12} md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
         <div className="p-4 box mt-5">
           <h2 className="mb-3">nuevo usuario</h2>
           {error && <Alert variant="danger">{error}</Alert>}

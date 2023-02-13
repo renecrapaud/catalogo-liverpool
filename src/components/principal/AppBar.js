@@ -30,7 +30,7 @@ function NavScroll() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
+            <Nav.Link href="/home">Inicio</Nav.Link>
             <Nav.Link href="#" onClick={handleLogout}>Cerrar Sesión</Nav.Link>
             
           </Nav>

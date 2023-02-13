@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <>
       <Hero seccion={'Catálogo'} SubTitulo={'Inicio de sesión'}></Hero>
-      <Col md={{ span: 6, offset: 3 }}>
+      <Col xs={12} md={{ span: 8, offset: 2 }} lg={{ span: 6, offset: 3 }}>
         <div className="p-4 box login mt-5">
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
