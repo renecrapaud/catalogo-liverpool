@@ -8,6 +8,7 @@ import Signup from "./components/sesion/Signup";
 import Detalle from "./components/principal/Detalle";
 import GlobalState from './context/productContext';
 import { useState } from 'react'
+import ProtectedRoute from "./components/sesion/ProtectedRoute";
 
 function App() {
   const [state, setState] = useState({});
@@ -19,8 +20,14 @@ function App() {
           <UserAuthContextProvider>
             <GlobalState.Provider value={[state, setState]}>
               <Routes>
-                <Route path="/home" element={<Home />} />
-                <Route path="/detalle" element={<Detalle />} />
+                <Route path="/home" element={
+                  <ProtectedRoute>
+                    <Home />
+                  </ProtectedRoute>
+                } />
+                <Route path="/detalle" element={<ProtectedRoute>
+                  <Detalle />
+                  </ProtectedRoute>} />
                 <Route path="/" element={<Login />} />
                 <Route path="/signup" element={<Signup />} />
               </Routes>

@@ -5,6 +5,7 @@ import GlobalState from '../../context/productContext';
 import { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import "bulma/css/bulma.css";
+import { Navigate } from "react-router-dom";
 
 function searchById(array,search){
     let found = null
@@ -27,9 +28,11 @@ function fullBackdropPath(imgName) {
 const Detalle = () => {
     const [product] = useContext(GlobalState);
     let { state } = useLocation();
+    if(product['products'] !== null){
+        return <Navigate to="/home" />
+    }
     let arrProds = Object.values(product['products'])[0]
     let elem = searchById(arrProds, state.id)
-    // console.log(elem)
   return (
     <>
       <NavScroll></NavScroll>
