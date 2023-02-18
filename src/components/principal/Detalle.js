@@ -28,10 +28,12 @@ function fullBackdropPath(imgName) {
 const Detalle = () => {
     const [product] = useContext(GlobalState);
     let { state } = useLocation();
-    if(product['products'] !== null){
+    
+    if(product['products'] === null){
         return <Navigate to="/home" />
     }
-    let arrProds = Object.values(product['products'])[0]
+    let arrProds = Object.values(product['products'])
+    
     let elem = searchById(arrProds, state.id)
   return (
     <>

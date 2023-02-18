@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -20,18 +20,18 @@ function NavScroll() {
       console.log(error.message);
     }
   };
-  const [product, setState] = useContext(GlobalState);
+  const [productState, setState] = useContext(GlobalState);
+  
+  const [searchTerm, setValue] = useState('');
+  const handleChange = (e) => {
+    setTimeout(()=>{
+      setState({searchTerm, searchTerm: e.target.value})
+    },800)
+    setValue(e.target.value)
+
+  }
   const BuscaElems = () =>{
-    // console.log(product.products.products)
-    // product.products.products.forEach((elem=>{
-    //   console.log(elem)
-
-    // }))
-    // let obj = product.products.products.find(o => o.id === 536554);
-    // product = obj
-    // setState(state => ({...product, products: obj}))
-    // navigate("/home");
-
+    console.log(productState.searchTerm)
   }
   return (
     <Navbar bg="light" expand="lg" fixed="top" style={{border: 'solid 1px rgb(230, 230, 230)'}}>
@@ -54,13 +54,22 @@ function NavScroll() {
               placeholder="Buscar"
               className="me-2"
               aria-label="Search"
+              value={searchTerm}
+              onChange={handleChange}
             />
             <Button variant="outline-success" onClick={BuscaElems}>Buscar</Button>
           </Form>
+          <DefProdState products = {searchTerm}></DefProdState>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
+}
+function DefProdState(searchTerm){
+  const [searchTrm, setState] = useContext(GlobalState);
+  useEffect(() => {
+      setState(state => ({...searchTrm, searchTerm: searchTerm}))
+  }, []);
 }
 
 export default NavScroll;
