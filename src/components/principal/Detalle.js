@@ -27,6 +27,7 @@ function fullBackdropPath(imgName) {
 
 const Detalle = () => {
     const [product] = useContext(GlobalState);
+    console.log(product)
     let { state } = useLocation();
     
     if(product['products'] === null){

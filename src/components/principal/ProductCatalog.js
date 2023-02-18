@@ -39,9 +39,9 @@ export default class ProductCatalog extends React.Component {
         }
     }
     render() {
-        if(this.state.products != null){
+        if(this.state.prodBk != null){
             return <>
-                <DefProdState products = {this.state.products} fn = {this.searchProd}></DefProdState>
+                <DefProdState products = {this.state.prodBk} fn = {this.searchProd}></DefProdState>
                 {this.state.products.map(mapping => (
                     this.renderTile(mapping.id ,mapping.original_title, mapping.vote_count, mapping.overview, mapping.backdrop_path )
                 ))}
@@ -55,14 +55,14 @@ export default class ProductCatalog extends React.Component {
 }
 
 function DefProdState(props){
-    const [product, setState] = useContext(GlobalState);
+    const [estado, setState] = useContext(GlobalState);
     useEffect(() => {
-        setState(state => ({...product, products: props.products}))
+        setState(state => ({products: props.products, searchTerm: estado.searchTerm}))
         // setState(state => ({...product, searchTerm: ''}))
     }, []);
     useEffect(() => {
-        if(typeof(product.searchTerm) != 'object'){
-            props.fn(product.searchTerm)
+        if(typeof(estado.searchTerm) != 'object'){
+            props.fn(estado.searchTerm)
         }
-    },[product.searchTerm])
+    },[estado.searchTerm])
 }

@@ -25,7 +25,7 @@ function NavScroll() {
   const [searchTerm, setValue] = useState('');
   const handleChange = (e) => {
     setTimeout(()=>{
-      setState({searchTerm, searchTerm: e.target.value})
+      setState({searchTerm: e.target.value, products: productState.products})
     },800)
     setValue(e.target.value)
 
@@ -68,7 +68,7 @@ function NavScroll() {
 function DefProdState(searchTerm){
   const [searchTrm, setState] = useContext(GlobalState);
   useEffect(() => {
-      setState(state => ({...searchTrm, searchTerm: searchTerm}))
+      setState(state => ({searchTerm: searchTerm, products: searchTrm.products}))
   }, []);
 }
 
